@@ -33,8 +33,6 @@
             <input type="checkbox" v-model="aufgabe.erledigt">
             <p>{{aufgabe.beschreibung}}</p>
             <span v-text="aufgabe.text"></span>
-            <button class="erledigtWechseln">&#10003</button>
-            <button class="loeschen" @click="loeschen(index)">&#10007</button>
         </li>
     </ul>
     <h2>Abgeschlossen</h2>
@@ -43,8 +41,6 @@
             <input type="checkbox" v-model="aufgabe.erledigt">
             <p>{{aufgabe.beschreibung}}</p>
             <span v-text="aufgabe.text"></span>
-            <button class="erledigtWechseln">&#10003</button>
-            <button class="loeschen" @click="loeschen(index)">&#10007</button>
         </li>
     </ul>
 </div>
