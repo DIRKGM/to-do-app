@@ -20,38 +20,41 @@
     <h2>Alle Aufgaben</h2>
     <ul>
         <li v-for="(aufgabe, index) in aufgaben">
-            <p>{{aufgabe.beschreibung}}</p>
-            <button class="erledigtWechseln">
-            </button>
-            <button class="loeschen" @click="loeschen(index)">x</button>
-            </li>
-        <li v-for="aufgabe in aufgaben">
             <input type="checkbox" v-model="aufgabe.erledigt">
+            <p>{{aufgabe.beschreibung}}</p>
             <span v-text="aufgabe.text"></span>
+            <button class="erledigtWechseln">&#10003</button>
+            <button class="loeschen" @click="loeschen(index)">&#10007</button>
         </li>
     </ul>
     <h2>Noch zu tun</h2>
     <ul>
-        <li v-for="aufgabe in aufgaben">
+        <li v-for="(aufgabe, index) in aufgaben">
             <input type="checkbox" v-model="aufgabe.erledigt">
+            <p>{{aufgabe.beschreibung}}</p>
             <span v-text="aufgabe.text"></span>
+            <button class="erledigtWechseln">&#10003</button>
+            <button class="loeschen" @click="loeschen(index)">&#10007</button>
         </li>
     </ul>
-    <h2>Abgeschlossen zu tun</h2>
-    <ul>
-        <li v-for="aufgabe in aufgaben">
-            <input type="checkbox" v-model="aufgabe.erledigt">
-            <span v-text="aufgabe.text"></span>
-        </li>
-    </ul>
-
-    <h1>Alle Aufgaben</h1>
+    <h2>Abgeschlossen</h2>
     <ul>
         <li v-for="(aufgabe, index) in aufgaben">
-        <p>{{aufgabe.beschreibung}}</p>
-        <button class="erledigtWechseln">
-            </button>
-        <button class="loeschen">x</button>
+            <input type="checkbox" v-model="aufgabe.erledigt">
+            <p>{{aufgabe.beschreibung}}</p>
+            <span v-text="aufgabe.text"></span>
+            <button class="erledigtWechseln">&#10003</button>
+            <button class="loeschen" @click="loeschen(index)">&#10007</button>
+        </li>
+    </ul>
+    <h2>Alle Aufgaben</h2>
+    <ul>
+        <li v-for="(aufgabe, index) in aufgaben">
+            <input type="checkbox" v-model="aufgabe.erledigt">
+            <p>{{aufgabe.beschreibung}}</p>
+            <span v-text="aufgabe.text"></span>
+            <button class="erledigtWechseln">&#10003</button>
+            <button class="loeschen" @click="loeschen(index)">&#10007</button>
         </li>
     </ul>
 </div>
