@@ -8,7 +8,52 @@
     <script src="./lib/js/vue.min.js"></script>
     <title>To-Do-App</title>
 </head>
+
 <body>
-    
+<div id="aufgabenApp">
+    <h1>To-Do-Liste</h1>
+    <p>
+        <label for="neueAufgabe">Weitere Aufgaben</label>
+        <input id="neueAufgabe" type="text">
+        <button class="hinzu">hinzufügen</button>
+    </p>
+    <h2>Alle Aufgaben</h2>
+    <ul>
+        <li v-for="(aufgabe, index) in aufgaben">
+            <p>{{aufgabe.beschreibung}}</p>
+            <button class="erledigtWechseln">
+            </button>
+            <button class="loeschen" @click="loeschen(index)">x</button>
+            </li>
+        <li v-for="aufgabe in aufgaben">
+            <input type="checkbox" v-model="aufgabe.erledigt">
+            <span v-text="aufgabe.text"></span>
+        </li>
+    </ul>
+    <h2>Noch zu tun</h2>
+    <ul>
+        <li v-for="aufgabe in aufgaben">
+            <input type="checkbox" v-model="aufgabe.erledigt">
+            <span v-text="aufgabe.text"></span>
+        </li>
+    </ul>
+    <h2>Abgeschlossen zu tun</h2>
+    <ul>
+        <li v-for="aufgabe in aufgaben">
+            <input type="checkbox" v-model="aufgabe.erledigt">
+            <span v-text="aufgabe.text"></span>
+        </li>
+    </ul>
+
+    <h1>Alle Aufgaben</h1>
+    <ul>
+        <li v-for="(aufgabe, index) in aufgaben">
+        <p>{{aufgabe.beschreibung}}</p>
+        <button class="erledigtWechseln">
+            </button>
+        <button class="loeschen">x</button>
+        </li>
+    </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,76 @@
+body {
+    font: 100 % sans-serif;
+    }
+    #aufgabenApp {
+    padding: 1rem;
+    }
+    h2, h1 {
+    font-size: 100 %;
+    }
+    label {
+    display: block;
+    }
+    ul {
+    max-width: 22rem;
+    list-style: none;
+    padding-left: 0;
+    }
+    li {
+    padding: 5px;
+    border-radius: 4px;
+    border: #a9e8e3 1px solid;
+    margin: 5px 0px;
+    display: flex;
+    align-items: center;
+    }
+    li p {
+    margin: 0;
+    }
+    li button {
+    border-radius: 4px;
+    color: #FFF;
+    }
+    .erledigtWechseln {
+        margin-left: auto;
+    }
+    .loeschen {
+    background-color: orange;
+    }
+    .erledigtWechseln {
+    background-color: #ff4112;
+    }
+    .abgeschlossen .erledigtWechseln {
+    background-color: #1c89ff;
+    }
+    .abgeschlossen p {
+    text-decoration: line-through;
+    }
+
+
+
+
+
+li {
+    display: flex;
+    align-items: center;
+    }
+
+    li p {
+        margin: 0;
+        }
+
+    .erledigtWechseln {
+     margin-left: auto;
+         }  
+
+    .abgeschlossen {
+        text-decoration: line-through;
+        }
+
+    .erledigtWechseln {
+        background-color: #ff4112; /* rot */
+        }
+
+    .abgeschlossen .erledigtWechseln {
+        background-color: #1c89ff; /* blau */
+        }
