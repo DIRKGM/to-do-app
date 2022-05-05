@@ -1,1 +1,4 @@
-# to-do-app
+# To-Do-App
+
+Keep it Simple
+
