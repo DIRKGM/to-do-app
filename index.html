@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./lib/css/style.css">
     <script src="/lib/js/vue.min.js"></script>
     <script src="/lib/js/vue.js"></script>
+    <script src="/lib/js/main.js"></script>
     <title>To-Do-App</title>
 </head>
 <body>
@@ -16,14 +17,14 @@
         <!-- Weitere Aufgaben -->
         <p>
             <label for="neueAufgabe">Weitere Aufgaben</label>
-            <input id="neueAufgabe" type="text" v-model.lazy="neueAufgabe">
-            <button class="hinzu" type="submit" @click="aufgabeHinzu">hinzufügen</button>
+            <input type="text" id="neueAufgabe" v-model="neueAufgabe">
+            <button class="hinzu" @click="aufgabeHinzu">hinzufügen</button>
         </p>
 
         <!-- Alle Aufgaben -->
         <h2>Alle Aufgaben</h2>
         <ul>
-            <li v-for="(aufgabe, index) in aufgaben" :class= "{'abgeschlossen': aufgabe.fertig}">{{aufgabe.beschreibung}}
+            <li v-for="(aufgabe, index) in aufgaben" :class= "{'abgeschlossen': aufgabe.fertig}">
                 <p>{{aufgabe.beschreibung}}</p>
                 <button class="erledigtWechseln" @click="erledigtWechseln(index)">✓</button>
                 <button class="loeschen" @click="loeschen(index)">✖</button>
@@ -36,11 +37,12 @@
             <li v-for="aufgabe in nichterledigt">{{aufgabe.beschreibung}}</li>
         </ul>
 
-    <!-- Abgeschlossen -->
+        <!-- Abgeschlossen -->
         <h2>Abgeschlossen</h2>
-            <ul>
-                <li v-for="aufgabe in erledigt">{{aufgabe.beschreibung}}</li>    
-            </ul>
+        <ul>
+            <li v-for="aufgabe in erledigt">{{aufgabe.beschreibung}}</li>    
+        </ul>
     </div>
 </body>
 </html>
+
